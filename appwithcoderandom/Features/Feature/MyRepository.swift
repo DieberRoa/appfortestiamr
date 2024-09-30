@@ -5,7 +5,7 @@ class MyRepository {
     var dao : Dao
     
     init() {
-        self.dao = Dao(externalDescription: "")
+        self.dao = Dao(externalDescription: empty_string)
     }
     
     func get() {

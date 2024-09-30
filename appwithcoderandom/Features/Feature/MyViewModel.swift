@@ -7,7 +7,7 @@ class MyViewModel : ObservableObject {
     
     init() {
         self.myRepository = MyRepository()
-        self.data = Data(name: "", icon: Image(systemName: "nosign"))
+        self.data = Data(name: empty_string, icon: Image(systemName: "nosign"))
     }
     
     func doStuff() {
