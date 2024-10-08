@@ -1,0 +1,14 @@
+trigger:
+- main
+
+variables:
+- group: 'analyzepria-variables'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    curl -X POST https://api-management-anayzeiapr.azure-api.net/fxanalyzeiapr/checkpr?mrnumber=$(System.PullRequest.PullRequestId)
+    -H "api-key-analizeiapr: $(API_KEY_ANALIZEIAPR))"
+  displayName: 'Check PR'
