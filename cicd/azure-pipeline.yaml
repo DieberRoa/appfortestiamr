@@ -9,5 +9,5 @@ pool:
 
 steps:
 - script: |
-    curl -X GET https://api-management-anayzeiapr.azure-api.net/fxanalyzeiapr/checkpr?mrnumber=$(System.PullRequest.PullRequestId) -H "api-key-analizeiapr: $(API_KEY_ANALIZEIAPR)"
+    curl -X GET https://api-management-anayzeiapr.azure-api.net/fxanalyzeiapr/checkpr?mrnumber=$(System.PullRequest.PullRequestNumber) -H "api-key-analizeiapr: $(API_KEY_ANALIZEIAPR)"
   displayName: 'Check PR'
