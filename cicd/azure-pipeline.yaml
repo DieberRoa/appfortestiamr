@@ -10,5 +10,5 @@ pool:
 steps:
 - script: |
     curl -X POST https://api-management-anayzeiapr.azure-api.net/fxanalyzeiapr/checkpr?mrnumber=1)
-    -H "api-key-analizeiapr: $(API_KEY_ANALIZEIAPR))"
+    -H "api-key-analizeiapr: $(API_KEY_ANALIZEIAPR)"
   displayName: 'Check PR'
