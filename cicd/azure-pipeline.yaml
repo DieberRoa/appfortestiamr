@@ -1,5 +1,8 @@
-trigger:
-- main
+trigger: none
+pr:
+  branches:
+    include:
+      - '*'
 
 variables:
 - group: 'analyzepria-variables'
@@ -9,5 +12,5 @@ pool:
 
 steps:
 - script: |
-    curl -X GET https://api-management-anayzeiapr.azure-api.net/fxanalyzeiapr/checkpr?mrnumber=1 -H "api-key-analizeiapr: $(API_KEY_ANALIZEIAPR)"
+    curl -X GET https://api-management-anayzeiapr.azure-api.net/fxanalyzeiapr/checkpr?mrnumber=$(System.PullRequest.PullRequestId) -H "api-key-analizeiapr: $(API_KEY_ANALIZEIAPR)"
   displayName: 'Check PR'
