@@ -1,5 +1,5 @@
 pr:
-  - develop
+  - main
 
 variables:
 - group: 'analyzepria-variables'
