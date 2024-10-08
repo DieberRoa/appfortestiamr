@@ -1,8 +1,8 @@
-trigger: none
+trigger: 
 pr:
   branches:
     include:
-      - '*'
+      - develop
 
 variables:
 - group: 'analyzepria-variables'
